@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  justify-content: space-between;
+  background: hsla(120, 6%, 90%, 1);
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+
+  background: linear-gradient(
+    135deg,
+    hsla(120, 6%, 90%, 1) 0%,
+    hsla(228, 75%, 16%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(120, 6%, 90%, 1) 0%,
+    hsla(228, 75%, 16%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(120, 6%, 90%, 1) 0%,
+    hsla(228, 75%, 16%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E4E7E4", endColorstr="#0A1647", GradientType=1 );
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+}
+
+.header-btn {
+  border: 2px solid black;
+  min-width: 100px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: navy;
+  color: white;
+  height: 3rem;
+  cursor: pointer;
+  margin-inline: 10px;
+}
+
+.header-btn:last-child {
+  background-color: black;
+}
+
+.header-btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.logo p {
+  font-size: 12px;
+  padding: 0;
+}
+.top-pane {
+  background-color: grey;
+}
+
+.pane {
+  height: 50vh;
+  display: flex;
+}
+
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: rgb(45, 24, 24);
+}
+
+.collapsed .CodeMirror-scroll {
+  position: absolute;
+}
+
+.collapsed {
+  flex-grow: 0;
+}
+
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+  padding: 1rem;
+  font-size: 22px;
+  font-weight: 600;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  color: white;
+}
+
+.code-mirror-wrapper {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.collapse-btn {
+  background-color: transparent;
+  border: none;
+  padding-inline: 6px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+iframe {
+  border: 2px solid black;
+}
+
+.vertical-content {
+  display: flex;
+}
+
+.vertical-content .pane {
+  min-height: calc(100vh - 100px);
+}
+
+.vertical-content .bottom-pane {
+  flex-grow: 1;
+}
+
+.vertical-content .top-pane {
+  flex-direction: column;
+  overflow-y: scroll;
+  flex-basis: 30%;
+}
+
+.top-pane::-webkit-scrollbar {
+  display: none;
+}
